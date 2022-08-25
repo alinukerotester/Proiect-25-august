@@ -12,19 +12,36 @@ body {
     background: #151320;
 }
 
-.Loader-wrapper {
+.loader-wrapper {
     width: 100px;
     height: 100px;
 }
 
-.Loader-wrapper .Loader {
+.loader-wrapper .loader {
     width: 100%;
     height: 100%;
-    border: 10px solid #162534;
+    border: 10px solid transparent;
     border-radius: 50%;
+    animation: rotate 5s linear infinite;
 }
 
-.Loader-wrapper .Loader {
+.loader-wrapper .loader-outer {
     border-top-color: #4bc8eb;
     border-bottom-color: #f13a8f;
+}
+
+.loader-wrapper .loader-inner {
+    border-top-color: #36f372;
+    border-bottom-color: #fff;
+    animation-duration: 4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: scale(1) rotate(360deg);
+    }
+
+    50% {
+        transform: scale(.6) rotate(-360deg);
+    }
 }
